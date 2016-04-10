@@ -1,0 +1,9 @@
+# List rules
+iptables -L
+
+# Drop all packets1
+sudo iptables -A INPUT -j DROP -p tcp -i eth0
+
+Delete command rule at a certain line.
+sudo iptables -D INPUT 8   -- deletes rule at line 8
+

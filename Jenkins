@@ -1,0 +1,36 @@
+Installing Jenkins - Ubuntu
+link: https://wiki.jenkins-ci.org/display/JENKINS/Installing+Jenkins+on+Ubuntu
+
+Download and Install - Option 1
+  This is the Debian package repository of Jenkins to automate installation and upgrade.
+  To use this repository, first add the key to your system:
+  wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+
+  Then add the following entry in your /etc/apt/sources.list:
+  deb http://pkg.jenkins-ci.org/debian binary/
+
+  Update your local package index, then finally install Jenkins:
+  sudo apt-get install language-pack-en
+  sudo apt-get update
+  sudo apt-get install jenkins
+
+Download and install - Option 2
+    wget -q -O - https://jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
+    sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian binary/ > /etc/apt/sources.list.d/jenkins.list'
+    sudo apt-get update
+    sudo apt-get install jenkins
+
+
+Ansible ad hoc command to run after the above - needs to be run to finish the install don't know why.
+
+sudo ansible -i ../../ansible/hosts devsrv -m apt -a 'name=jenkins state=present' --private-key=id_rsa
+Jenkins Bitbucket creation
+  1. Create SSH key for jenkins User
+    - ssh-keygen -t rsa
+  2. Copy the public key id_rsa.pub to Bitbucket
+  3. Settings, deployment keys and then click add key. Paste the key into
+  4. Create a webhook, enter the following into the dialog box and select Push
+        - IP:8080/bitbucket-hook
+  5. Execute the following command from the command line as user jenkins
+        - git ls-remote -h ssh://git@bitbucket.org:cmmills/fixyourip.com.git HEAD
+        This should execute without errors.

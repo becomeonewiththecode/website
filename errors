@@ -1,0 +1,14 @@
+Failed to fetch http://dl.google.com/linux/chrome/deb/dists/stable/Release Unable to find expected entry
+ ‘main/binary-i386/Packages’ in Release file (Wrong sources.list entry or malformed file)
+
+Source: http://www.omgubuntu.co.uk/2016/03/fix-failed-to-fetch-google-chrome-apt-error-ubuntu
+ Fix
+  1. Open a new Terminal window and run the following command (assuming you’re on the Stable Channel, if not, see the featured comment):
+      sudo vi /etc/apt/sources.list.d/google-chrome.list
+  2. In the text file that opens edit the file so that the line reads:
+      deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+      The only addition you need to make is entering the [amd64] architecture after ‘deb’ but preceding the ‘http’.
+      Do not edit or replace any other text in this file.
+  3. Hit Save. Close the vi.
+      Now return to the Terminal and refresh your package list by running:
+      sudo apt-get update

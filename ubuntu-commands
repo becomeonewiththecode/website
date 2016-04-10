@@ -1,0 +1,7 @@
+Search for packages to install
+apt-cache search <keyword>
+  example: apt-cache search apache2
+
+Install packages
+apt-get install <keyword>
+  example: apt-get install apache2

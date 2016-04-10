@@ -1,0 +1,169 @@
+Linux Commands
+
+Show linux version
+OS Supported: Ubunutu, Centos, RHEL.
+
+  cat the following files: /etc/os-release or /etc/redhat-release or   /proc/version
+
+/etc/os-release:
+  the command: ls -al /etc/*-release will show all files that contain the word release in their name.
+  the following command will show the operating system and version
+
+  cat /etc/os-release
+  NAME="Ubuntu"
+  VERSION="15.10 (Wily Werewolf)"
+  ID=ubuntu
+  ID_LIKE=debian
+  PRETTY_NAME="Ubuntu 15.10"
+  VERSION_ID="15.10"
+  HOME_URL="http://www.ubuntu.com/"
+  SUPPORT_URL="http://help.ubuntu.com/"
+  BUG_REPORT_URL="http://bugs.launchpad.net/ubuntu/
+
+cat /proc/version
+
+  Centos:
+  cmills@srv1 ~]$ cat /proc/version
+  Linux version 4.1.5-x86_64-linode61 (maker@build) (gcc version 4.7.2 (Debian 4.7.2-5) ) #7 SMP Mon Aug 24 13:46:31 EDT 2015
+
+  Ubuntu:
+  oss@cmills-Kudu-Pro:~$ cat /proc/version
+  Linux version 4.2.0-30-generic (buildd@lgw01-60) (gcc version 5.2.1 20151010 (Ubuntu 5.2.1-22ubuntu2) ) #36-Ubuntu SMP Fri Feb 26 00:58:07 UTC 2016
+
+  command: lsb_release
+  OS Supported: Ubunutu,  RHEL.
+
+  alternatively you can use the lsb command
+  show the description of the Operating system
+  lsb_release -d
+  Description:	Ubuntu 15.10
+
+  lsb_release -a
+  Distributor ID:	Ubuntu
+  Description:	Ubuntu 15.10
+  Release:	15.10
+  Codename:	wily
+
+Show installed applications
+  OS: Centos/Fedora/RHEL
+  rpm -qa | less or rpm -qa | grep -i package-name
+
+  OS: Debian based systems (includes Ubuntu)
+  dpkg --get-selections (shows all packages)
+  dpkg --get-selections | grep -i package-name (search for a specific package)
+  sudo apt list --installed (show list of installed packages)
+  sudo apt list --installed | grep -i package-name ( search for a specific package)
+
+Remove Application:
+  OS: Debian: Ubuntu
+  sudo apt -y remove package-name
+    you may have to run this command to delete any residual configuration files that were not removed.
+    sudo dpkg -l | grep '^rc' | awk '{print $2}' | xargs sudo apt-get -y purge
+
+  OS: centos, RHEL
+  sudo yum delete package-name
+
+
+Show Mounted files
+  option one:
+  df -ah
+
+  oss@cmills-Kudu-Pro:~$ df -ah
+  Filesystem      Size  Used Avail Use% Mounted on
+  sysfs              0     0     0    - /sys
+  proc               0     0     0    - /proc
+  udev            7.8G     0  7.8G   0% /dev
+  devpts             0     0     0    - /dev/pts
+  tmpfs           1.6G  9.7M  1.6G   1% /run
+  /dev/dm-1       214G   35G  168G  18% /
+  securityfs         0     0     0    - /sys/kernel/security
+  tmpfs           7.8G  113M  7.7G   2% /dev/shm
+  tmpfs           5.0M  4.0K  5.0M   1% /run/lock
+  tmpfs           7.8G     0  7.8G   0% /sys/fs/cgroup
+  cgroup             0     0     0    - /sys/fs/cgroup/systemd
+  pstore             0     0     0    - /sys/fs/pstore
+  cgroup             0     0     0    - /sys/fs/cgroup/devices
+  cgroup             0     0     0    - /sys/fs/cgroup/cpuset
+  cgroup             0     0     0    - /sys/fs/cgroup/memory
+  cgroup             0     0     0    - /sys/fs/cgroup/blkio
+  cgroup             0     0     0    - /sys/fs/cgroup/freezer
+  cgroup             0     0     0    - /sys/fs/cgroup/perf_event
+  cgroup             0     0     0    - /sys/fs/cgroup/net_cls,net_prio
+  cgroup             0     0     0    - /sys/fs/cgroup/cpu,cpuacct
+  cgroup             0     0     0    - /sys/fs/cgroup/hugetlb
+  systemd-1          -     -     -    - /proc/sys/fs/binfmt_misc
+  mqueue             0     0     0    - /dev/mqueue
+  debugfs            0     0     0    - /sys/kernel/debug
+  hugetlbfs          0     0     0    - /dev/hugepages
+  fusectl            0     0     0    - /sys/fs/fuse/connections
+  /dev/sda1       236M  199M   26M  89% /boot
+  cgmfs           100K     0  100K   0% /run/cgmanager/fs
+  binfmt_misc        0     0     0    - /proc/sys/fs/binfmt_misc
+  tmpfs           1.6G   56K  1.6G   1% /run/user/1001
+  gvfsd-fuse         0     0     0    - /run/user/1001/gvfs
+  /dev/sdb1       236G   57G  180G  24% /media/oss/USB30FD
+
+  or
+
+  df -aTh
+
+  option two:
+  cat /proc/self/mounts
+
+  option three:
+  mount -l
+
+Clear space on /boot
+
+Show all linux kernels
+    dpkg -l linux-image-\*
+    Desired=Unknown/Install/Remove/Purge/Hold
+    | Status=Not/Inst/Conf-files/Unpacked/halF-conf/Half-inst/trig-aWait/Trig-pend
+    |/ Err?=(none)/Reinst-required (Status,Err: uppercase=bad)
+    ||/ Name                            Version              Architecture         Description
+    +++-===============================-====================-====================-====================================================================
+    un  linux-image-3.0                 <none>               <none>               (no description available)
+    ii  linux-image-3.19.0-32-generic   3.19.0-32.37         amd64                Linux kernel image for version 3.19.0 on 64 bit x86 SMP
+    rc  linux-image-4.2.0-23-generic    4.2.0-23.28          amd64                Linux kernel image for version 4.2.0 on 64 bit x86 SMP
+    rc  linux-image-4.2.0-27-generic    4.2.0-27.32          amd64                Linux kernel image for version 4.2.0 on 64 bit x86 SMP
+    ii  linux-image-4.2.0-30-generic    4.2.0-30.36          amd64                Linux kernel image for version 4.2.0 on 64 bit x86 SMP
+    ii  linux-image-extra-3.19.0-32-gen 3.19.0-32.37         amd64                Linux kernel extra modules for version 3.19.0 on 64 bit x86 SMP
+    rc  linux-image-extra-4.2.0-23-gene 4.2.0-23.28          amd64                Linux kernel extra modules for version 4.2.0 on 64 bit x86 SMP
+    rc  linux-image-extra-4.2.0-27-gene 4.2.0-27.32          amd64                Linux kernel extra modules for version 4.2.0 on 64 bit x86 SMP
+    ii  linux-image-extra-4.2.0-30-gene 4.2.0-30.36          amd64                Linux kernel extra modules for version 4.2.0 on 64 bit x86 SMP
+    ii  linux-image-generic             4.2.0.30.33          amd64                Generic Linux kernel image
+
+
+Remove old kernels
+
+  $ uname -r                        ## This command identifies the currently-running kernel
+4.2.0-21-generic                  ## This is the current kernel.
+                                  ## DO NOT REMOVE it!
+
+dpkg -l | tail -n +6 | grep -E 'linux-image-[0-9]+' | grep -Fv $(uname -r)
+                                  ## This command lists all the kernels excluding the booted
+                                  ## kernel in the package database, and their status.
+rc  linux-image-4.2.0-14-generic  ## The oldest kernel in the database
+                                  ## Status 'rc' means it's already been removed
+ii  linux-image-4.2.0-15-generic  ## The oldest installed kernel. Eligible for removal.
+                                  ## Status 'ii' means Installed.
+ii  linux-image-4.2.0-16-generic  ## Another old installed kernel. Eligible for removal
+ii  linux-image-4.2.0-18-generic  ## Another old installed kernel. Eligible for removal
+ii  linux-image-4.2.0-19-generic  ## The previous good kernel. Keep
+iU  linux-image-4.2.0-22-generic  ## DO NOT REMOVE. Status 'iU' means it's not installed,
+                                  ## but queued for install in apt.
+                                  ## This is the package we want apt to install.
+
+                                  ## Purge the oldest kernel package using dpkg instead of apt.
+$ sudo dpkg --purge linux-image-4.2.0-15-generic
+                                  ## If the previous command fails, some installed package
+                                  ## depends on the kernel. The output of dpkg tells the name
+                                  ## of the package. Purge it first.
+
+                                  ## Also purge the respective header package.
+$ sudo dpkg --purge linux-headers-4.2.0-15-generic
+                                  ## Try also purging the common header package.
+$ sudo dpkg --purge linux-headers-4.2.0-15
+                                  ## Do not worry, if the previous command fails.
+
+$ sudo apt-get -f install         ## Try to fix the broken dependency.

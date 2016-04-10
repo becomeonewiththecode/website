@@ -1,0 +1,17 @@
+List Virtual Machines registered with Virtualbox
+  command: VBoxManage list vms
+
+List runinning virtual machines wthin virtualbox
+  command: VBoxManage list runningvms
+
+Delete an "inaccessible" vm
+  command: VBoxManage unregistervm --delete uid of the vm
+  Steps:
+    - Obtain a list of vm's from virtualbox
+    command: VBoxManage list vms
+    "win2012r2_default_1457559285279_46979" {20700c4a-8ce2-4ab7-a480-9183088aacde}
+    "win2008r2-standard-x64-nocm_default_1457590176821_60868" {f44eb277-a6d2-4fc7-90b4-e7400c6abea6}
+    "coreos-stable_default_1457711994685_28811" {45d3c1a6-3b5d-44f9-a0f0-b0a57cb9a240}
+    "cloudify_default_1458091729489_86684" {114e1964-33bc-4cc6-ab78-1843122b6a89}
+    - The alphanumeric string is the UID of the vm use that to pass to the command
+    - VBoManage unregistervm --delete 114e1964-33bc-4cc6-ab78-1843122b6a89
