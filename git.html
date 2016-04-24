@@ -1,51 +1,86 @@
-<!doctypte html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <title> Become one with the Code</title>
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/custom.css" rel="stylesheet">
+    <link href="css/three-column.css" rel="stylesheet">
 </head>
 <body>
+
+  <nav class="navbar navbar-inverse navbar-default">
+      <div>
+        <a class="navbar-brand" href="/">Becomeonewiththecode.com</a>
+      </div>
+
+      <ul class="nav navbar-nav">
+        <li class="hidden-sm hidden-xs hidden-md"><a href=".">Home</a></li>
+        <li class="hidden-sm hidden-xs hidden-md"><a href=".">About</a></li>
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles
+            <span class="glyphicon glyphicon-circle-arrow-down"></span>
+          </a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href=".">Git</a></li>
+              <li><a href=".">Ansible</a></li>
+          </ul>
+        </li>
+      </ul>
+  </nav>
+
+  <div class="header">
+  </div>
+
 <div class="container">
 
   <div class="left">
-    <a href="git.html">Git</a><br>
-    Ansible<br>
-    Vagrant<br>
-    Here
+    <ul>
+      <li><a href="git.html">Git</a></li>
+      <li>Ansible</li>
+    </ul>
     <button type="submit" class = "btn-primary btn-sm">Primary</button>
   </div>
 
   <div class="right">
-    Advertising<br>
-    Links<br>
-    Go<br>
-    Here
+    <div class="jumbotron">
+      Advertising
+      Links
+      Go
+      Here
+    </div>
   </div>
 
   <div class="middle">
-    <h1>GIT</h1>
+    <div class="page-header">
+      <h2>Using GIT</h2>
+    </div>
 
-    <h2>GIT  Setup</h2>
-
-    <pre>
+    <h3>GIT  Setup</h3>
     Set username
+    <pre>
     git config --global user.name “Clarence Mills”
-
-    Set your email address
-    git config --global user.email “cmills@opensitesolutions.com”
-
-    Change your commit editor
-    git config --global core.editor “vi”
-
-    Check your config settings
-    git config --list
     </pre>
 
-    <h2>Branch</h2>
+    Set your email address
+    <pre>
+      git config --global user.email “cmills@opensitesolutions.com”
+    </pre>
+
+    Change your commit editor
+    <pre>
+      git config --global core.editor “vi”
+    </pre>
+
+    Check your config settings
+    <pre>
+      git config --list
+    </pre>
+
+
+    <h3>Branch</h3>
     <pre>
     Create a new branch
     git branch branch-name
@@ -81,7 +116,7 @@
     </pre>
 
 
-    <h2>Rollback</h2>
+    <h3>Rollback</h3>
 
     In order to roll back to another commit time frame, you need a find the commit time
 
@@ -127,9 +162,9 @@
     </pre>
 
 
-    <h2>Understanding Repositories</h2>
+    <h3>Understanding Repositories</h3>
 
-    <h2>Removing files from a repository</h2>
+    <h3>Removing files from a repository</h3>
 
     <pre>
     shows files that were deleted from the directory and not listed in the repository.
@@ -158,7 +193,7 @@
     </pre>
 
 
-    <h2>removing the files from the repository</h2>
+    <h3>removing the files from the repository</h3>
     <pre>
     git rm *
 
@@ -182,7 +217,7 @@
     </pre>
     <p>Adding --cache will remove the files from the repository but keep the files in the local directory, git removes it from tracking.</p>
 
-    <h2>List remote repositories</h2>
+    <h3>List remote repositories</h3>
     <pre>
     git remote -v
     cmills@testsrv toolsforthecloud.com]$ git remote -v
@@ -190,12 +225,12 @@
     origin  ssh://srv2.opensitesolutions.com:1001/home/cmills/work_dir/toolsforthecloud.com (push)
     </pre>
 
-    <h2>Remove remote repository</h2>
+    <h3>Remove remote repository</h3>
     <pre>
     git remote remove origin
     </pre>
 
-    <h2>Add repositories</h2>
+    <h3>Add repositories</h3>
     <pre>git remote add origin (whatever name points to the repositories) ssh://git.opensitesolutions.com:1001/home/cmils/work_dir/opensitesolutions.com</pre>
 
     <i>If you have moved the location of the repository on the master GIT server, you will need to execute the following command before doing another push or pull:</i>
@@ -203,9 +238,9 @@
     <pre>git push --set-upstream origin dev</pre>
     <p>The above command tells  GIT to start tracking changes to the new remoete "origin"</p>
 
-    <h2>Publishing a repository</h2>
+    <h3>Publishing a repository</h3>
 
-    <h2>Publish Repository to web site directory without the .git file</h2>
+    <h3>Publish Repository to web site directory without the .git file</h3>
     <pre>
     git archive --format=zip -o /home/cmills/opensitesolutions.zip HEAD
     git archive --format=tar -o /home/cmills/opensitesolutions.tar HEAD
@@ -213,14 +248,14 @@
     </pre>
 
 
-    <h2>Publish current checked out branch</h2>
+    <h3>Publish current checked out branch</h3>
     <pre>
     sudo git archive --format=tar --output /tmp/office.tar HEAD
     </pre>
 
-    <h2>Cloning</h2>
+    <h3>Cloning</h3>
 
-    <h2>Cloning repositories locally </h2>
+    <h3>Cloning repositories locally </h3>
     <pre>
     git clone -l local-repository clone-location
     git clone -l /var/ww/html/opensitesolutions.com test
@@ -237,20 +272,20 @@
     </pre>
 
 
-    <h2>Clone from a remote location</h2>
+    <h3>Clone from a remote location</h3>
     <pre>
     git clone ssh://srv2.opensitesolutions.com:1001/home/cmills/work_dir/opensitesolutions.com .
     The above command will fetch the entire repository to your current location.
     </pre>
 
 
-    <h2>Show an ascii diagram of how branch’s are connected</h2>
+    <h3>Show an ascii diagram of how branch’s are connected</h3>
     <pre>
     git log --all --graph --decorate --oneline --simplify-by-decoration
     </pre>
 
 
-    <h2>Ignoring files</h2>
+    <h3>Ignoring files</h3>
     <pre>
     Use the .gitignore file, If files are currently being tracked you will need to do the following.
     </pre>
@@ -269,7 +304,7 @@
     rm '.project'
     </pre>
 
-    <h2>results after files been deleted</h2>
+    <h3>results after files been deleted</h3>
     <pre>
     oss@cmills-Kudu-Pro:~/work/office.opensitesolutions.com$ git status
     On branch dev
@@ -281,7 +316,7 @@
     </pre>
 
 
-    <h2>example .gitignore file</h2>
+    <h3>example .gitignore file</h3>
     <pre>
     oss@cmills-Kudu-Pro:~/work/office.opensitesolutions.com$ cat .gitignore
     \.buildpath
@@ -300,7 +335,7 @@
 
     Push up to your master branch, The .gitignore file is only being used locally and will not be pushed up to the master branch (origin) because it’s not being tracked.
 
-    <h2>Overwrite remote (master branch)</h2>
+    <h3>Overwrite remote (master branch)</h3>
 
     If you try to push remotely and receive the following error
 
@@ -349,7 +384,7 @@
     warn
     </pre>
 
-    <h2>Show what's changed</h2>
+    <h3>Show what's changed</h3>
 
     <p>
     <code>git ls-files -dmo --exclude-standard</code>
