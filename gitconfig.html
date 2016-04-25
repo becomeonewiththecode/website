@@ -17,7 +17,7 @@
 </head>
 <body>
 
-<!--- begin header --->
+<!--- begin Navigation header --->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
     <div>
@@ -28,7 +28,7 @@
       <li class="hidden-sm hidden-xs"><a href="index.html">Home</a></li>
       <li class="hidden-sm hidden-xs"><a href=".">About</a></li>
       <li class="hidden-xs">
-        <a class="dropdown-toggle" data-toggle="dropdown-menu" href="#">Articles
+        <a class="dropdown-toggle" data-toggle="dropdown-menu" href="git.html">Articles
           <span class="glyphicon glyphicon-circle-arrow-down"></span>
         </a>
           <ul class="dropdown-menu" role="menu">
@@ -41,9 +41,8 @@
     </ul>
 
 </nav>
-<!--- end header --->
+<!--- end Navigation header --->
 
-<!--- begin content --->
 <div>
 
 <!--- begin left column--->
@@ -56,6 +55,9 @@
         <a href="#" class="list-group-item disabled">BootStrap</a>
         <a href="#" class="list-group-item disabled">Python</a>
 
+
+
+
     </div>
   </div>
 <!--- end left column --->
@@ -64,15 +66,76 @@
   <div class="col-md-8">
     <div class="container-fluid">
 
-      <div class="page-header">
-        <h2> Use code for change</h2>
-      </div>
+      <!-- Begin Content -->
+      <pre>
+      [user]
+      	email = user@domainname.com
+      	name = Your Name
+      </pre>
 
-      <div class="jumbotron">
-        <p>
-          A journey in using code to create and manage change.
-        </p>
-      </div>
+      <pre>
+      [push]
+      	default = simple
+      </pre>
+
+      <pre>
+      [core]
+      editor = vi
+      </pre>
+
+      <pre>
+        [alias]
+        	# Show short summary,branch,untracked files and changed content within the files.
+        	st = status -sbu -v
+      </pre>
+
+      <pre>
+        # Show branch name
+      	brname = !git branch | grep "^*" | awk '{print $2 }'
+      </pre>
+
+      <pre>
+        # Show all branches
+        br = branch -av
+      </pre>
+
+      <pre>
+        # delete branch
+        brdel = branch -D
+      </pre>
+
+      <pre>
+        # Show remote repositories
+        repo = remote -v
+      </pre>
+
+      <pre>
+        standup = !git log --reverse --branches --since=$(if [[ "Mon" == "$(date +%a)" ]]; then echo "last friday"; else echo "yesterday"; fi) --author=$(git config --get user.email) --format=format:'%C(cyan) %ad %C(yellow)%h %Creset %s %Cgreen%d' --date=local"
+      </pre>
+
+      <pre>
+        # Show the current branch name (usefull for shell prompts)
+        brname = !git branch | grep "^*" | awk '{ print $2 }
+      </pre>
+      <pre>
+        # Show the root of the repository
+        top = rev-parse --show-toplevel
+      </pre>
+
+      <pre>
+      	churn = !git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | awk 'BEGIN {print "count,file"} {print $1 "," $2}'
+      </pre>
+
+      <pre>
+
+    	   # remove a remote repository
+         rmrepo = remote remove
+      </pre>
+
+
+
+
+      <!-- End Content -->
 
     </div>
 
@@ -83,9 +146,9 @@
   <div class="col-md-2">
     <div class="list-group">
   <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Code</h4>
-    <p class="list-group-item-text">
-      The command line is where it starts and ends, use code to create change.
+    <h4 class="list-group-item-heading">GIT</h4>
+    <p class="list-group-item-text">Git is a version control system that keep track of changes in a file, this allows you
+      to roll back to a specific version.
     </p>
   </a>
 </div>
