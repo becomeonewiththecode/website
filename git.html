@@ -8,15 +8,21 @@
     <link href="css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/three-column.css" rel="stylesheet">
+
+    <style>
+      body { padding-top: 70px};
+    </style>
+
 </head>
 <body>
 
-  <nav class="navbar navbar-inverse navbar-default">
+<div class="container" class="col-md-2 col col-xs-2">
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div>
-        <a class="navbar-brand" href="/">Becomeonewiththecode.com</a>
+        <a class="navbar-brand" href="#">Becomeonewiththecode.com</a>
       </div>
 
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav" text-align="right">
         <li class="hidden-sm hidden-xs hidden-md"><a href=".">Home</a></li>
         <li class="hidden-sm hidden-xs hidden-md"><a href=".">About</a></li>
         <li>
@@ -30,30 +36,33 @@
         </li>
       </ul>
   </nav>
+</div>
 
-  <div class="header">
+<div class="left">
+  <div class="list-group">
+      <a href="git.html" class="list-group-item">Git</a>
+      <a href="#" class="list-group-item disabled">Ansible</a>
+      <a href="#" class="list-group-item disabled">Vagrant</a>
+      <a href="#" class="list-group-item disabled">Docker</a>
+      <a href="#" class="list-group-item disabled">Cloud</a>
+
   </div>
+</div>
 
-<div class="container">
-
-  <div class="left">
-    <ul>
-      <li><a href="git.html">Git</a></li>
-      <li>Ansible</li>
-    </ul>
-    <button type="submit" class = "btn-primary btn-sm">Primary</button>
-  </div>
-
-  <div class="right">
-    <div class="jumbotron">
+<div class="right">
+  <div class="">
+    <div>
       Advertising
       Links
       Go
       Here
     </div>
   </div>
+</div>
 
-  <div class="middle">
+
+<div class="middle">
+  <div class="container">
     <div class="page-header">
       <h2>Using GIT</h2>
     </div>
