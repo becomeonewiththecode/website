@@ -18,48 +18,45 @@
 <body>
 
 <!--- begin Navigation header --->
-  <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">Become one with the Code</a>
-      </div>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="git.html">GIT</a></li>
-              <li><a href="index.html">Ansible</a></li>
-              <li><a href="index.html">Docker</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    <div>
+      <a class="navbar-brand" href="index.html">Becomeonewiththecode.com</a>
     </div>
-  </nav>
+
+    <ul class="nav navbar-nav navbar-right">
+      <li class="hidden-sm hidden-xs"><a href="index.html">Home</a></li>
+      <li class="hidden-sm hidden-xs"><a href=".">About</a></li>
+      <li class="hidden-xs">
+        <a class="dropdown-toggle" data-toggle="dropdown-menu" href="git.html">Articles
+          <span class="glyphicon glyphicon-circle-arrow-down"></span>
+        </a>
+          <ul class="dropdown-menu" role="menu">
+              <li><a href=".">Git</a></li>
+              <li><a href=".">Ansible</a></li>
+              <li><a href=".">Vagrant</a></li>
+              <li><a href=".">Packer</a></li>
+          </ul>
+      </li>
+    </ul>
+
+</nav>
 <!--- end Navigation header --->
 
-
-<!--- begin content --->
 <div>
 
 <!--- begin left column--->
   <div class="col-md-2">
     <div class="list-group">
-      
         <a href="git.html" class="list-group-item">Git</a>
         <a href="#" class="list-group-item disabled">Ansible</a>
         <a href="#" class="list-group-item disabled">Vagrant</a>
         <a href="#" class="list-group-item disabled">Docker</a>
         <a href="#" class="list-group-item disabled">BootStrap</a>
         <a href="#" class="list-group-item disabled">Python</a>
+
+
+
 
     </div>
   </div>
@@ -69,15 +66,10 @@
   <div class="col-md-8">
     <div class="container-fluid">
 
-      <div class="page-header">
-        <h2> Use code for change</h2>
-      </div>
+      <!-- Begin Content -->
 
-      <div class="jumbotron">
-        <p>
-          A journey in using code to create and manage change.
-        </p>
-      </div>
+
+      <!-- End Content -->
 
     </div>
 
@@ -88,9 +80,9 @@
   <div class="col-md-2">
     <div class="list-group">
   <a href="#" class="list-group-item active">
-    <h4 class="list-group-item-heading">Code</h4>
-    <p class="list-group-item-text">
-      The command line is where it starts and ends, use code to create change.
+    <h4 class="list-group-item-heading">GIT</h4>
+    <p class="list-group-item-text">Git is a version control system that keep track of changes in a file, this allows you
+      to roll back to a specific version.
     </p>
   </a>
 </div>
@@ -100,9 +92,6 @@
 <!--- end content --->
 
 <div class="footer">
-  <div class="container">
-      <hr>
-  </div>
   <b><a href="http://www.becomeonewiththecode.com">www.becomeonewiththecode.com</a></b>
 </div>
 

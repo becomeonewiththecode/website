@@ -1,0 +1,54 @@
+Building AWS instances
+
+Vagrantfile:
+
+Vagrant File
+  Vagrant.configure(2) do |config|
+    config.vm.box = "dummy"
+    # Provider
+    config.vm.provider :aws do | aws, override|
+    aws.access_key_id = "ACCESS_KEY"
+    aws.secret_access_key = "SECRET ACCESS KEY"
+    aws.keypair_name = "cmills_key.pem"
+    aws.region = "us-east-1"
+    aws.instance_type = "t2.micro"                                      (AMI that's part of the free tier.)
+    aws.ami = "ami-8fcee4e5"
+    #aws.security_groups = ["api_group"]
+    override.ssh.username = "ubuntu"
+    #override.ssh.private_key_path = "/home/oss/.ssh/id_rsa"
+    end
+  end
+
+end vagrantfile
+
+AWS specific commands:
+Finding AWS regions
+
+Regions
+  Region Name	                  Region	              Endpoint	                                           Protocol
+  US East (N. Virginia)	        us-east-1	            apigateway.us-east-1.amazonaws.com	                  HTTPS
+  US West (Oregon)	            us-west-2	            apigateway.us-west-2.amazonaws.com	                  HTTPS
+  EU (Ireland)	                eu-west-1	            apigateway.eu-west-1.amazonaws.com	                  HTTPS
+  Asia Pacific (Tokyo)	        ap-northeast-1	      apigateway.ap-northeast-1.amazonaws.com	              HTTPS
+  Asia Pacific (Singapore)	    ap-southeast-1	      apigateway.ap-southeast-1.amazonaws.com	              HTTPS
+  EU (Frankfurt)	              eu-central-1	        apigateway.eu-central-1.amazonaws.com	                HTTPS
+
+Amazon EC2
+  Region Name	                  Region	              Endpoint	                                           Protocol
+  US East                       (N. Virginia)	        us-east-1	ec2.us-east-1.amazonaws.com	               HTTP and HTTPS
+  US West                       (N. California)	      us-west-1	ec2.us-west-1.amazonaws.com	               HTTP and HTTPS
+  US West                       (Oregon)	            us-west-2	ec2.us-west-2.amazonaws.com	               HTTP and HTTPS
+  EU                            (Ireland)	            eu-west-1	ec2.eu-west-1.amazonaws.com	               HTTP and HTTPS
+  EU                            (Frankfurt)	          eu-central-1ec2.eu-central-1.amazonaws.com           HTTP and HTTPS
+  Asia Pacific                  (Tokyo)	              ap-northeast-1	ec2.ap-northeast-1.amazonaws.com	   HTTP and HTTPS
+  Asia Pacific                  (Seoul)	              ap-northeast-2	ec2.ap-northeast-2.amazonaws.com	   HTTP and HTTPS
+  Asia Pacific                  (Singapore)	          ap-southeast-1	ec2.ap-southeast-1.amazonaws.com	   HTTP and HTTPS
+  Asia Pacific                  (Sydney)	            ap-southeast-2	ec2.ap-southeast-2.amazonaws.com	   HTTP and HTTPS
+  South America                 (Sao Paulo)	          sa-east-1	ec2.sa-east-1.amazonaws.com	               HTTP and HTTPS
+
+Vagrant images
+Amazon image details can be found here http://cloud-images.ubuntu.com/locator/ec2/
+
+
+Spin up an instances
+  vagrant up --provider=aws

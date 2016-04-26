@@ -1,0 +1,63 @@
+Vagrantfile
+
+# Multi-machine Vagrantfile build - March 18,2016
+# Provider: Digital Ocean specific
+
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'digital_ocean'
+Vagrant.configure(2) do |config|
+  config.vm.box = "digital_ocean"
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+  config.ssh.private_key_path = '~/.ssh/id_rsa'
+    config.vm.provider :digital_ocean do |provider|
+    	provider.token = 'API Key'
+    	provider.image = 'ubuntu-14-04-x64'
+    	provider.region = 'nyc2'
+    	provider.size = '512mb'
+    end
+
+    config.vm.define "lbsrv001" do |lb_config|
+      lb_config.vm.hostname = 'lbsrv-001.opensitesolutions.com'
+    end
+
+    config.vm.define "websrv001" do |websrv001_config|
+      websrv001_config.vm.hostname = 'websrv-001.opensitesolutions.com'
+      websrv001_config.vm.provision "ansible" do |ansible|
+        ansible.playbook = "ansible/websrv-playbook.yml"
+      end
+    end
+
+    config.vm.define "websrv002" do |websrv002_config|
+      websrv002_config.vm.hostname = 'websrv-002.opensitesolutions.com'
+      websrv002_config.vm.provision "ansible" do |ansible|
+        ansible.playbook = "ansible/websrv-playbook.yml"
+      end
+    end
+
+Controlling VM's
+
+The moment that multiple VM's are introduced in a Vagrantfile, the usage of the various vagrant command line commands change slightly.
+This change is hopefully mostly intuitive, and will be shown using a very simple example based on vagrant up.
+
+In a single VM environment, vagrant up starts that VM. In a multi-VM environment vagrant up starts every VM.
+If a name is specified to the command such as vagrant up web then it will start only that specific VM.
+
+This pattern follows for every other command as well, although some don’t implement the “every VM” functionality when it doesn’t make sense,
+such as vagrant ssh, which requires that a VM name be specified if it’s in a multi-VM environment.
+
+example:
+Halt
+vagrant halt dbsrv001                       - will stop server labled dbsrv001
+vagrant halt dbcrv001 dbsrv002              - will stop the servers mentioned starting from right to left.
+
+Reload
+vagrant reload dbsrv001                     - will restart dbsrv001 (restart server and reprovision)
+vagrant reload --no-provision lbsrv001      - restarts the server and does not provision.
+vagrant reload --provision                  - restarts the server and provision, can be used when you want to implement changes.
+
+
+Ansible options
+These options can be included within the Vagrantfile under config or when you define a specific server
+ansible.playbook = "devops/user.yml"
+ansible.inventory_path = "devops/webhosts"
+ansible.verbose = "vvvv"
+ansible.sudo = true
