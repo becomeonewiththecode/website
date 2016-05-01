@@ -24,13 +24,45 @@ Download and install - Option 2
 Ansible ad hoc command to run after the above - needs to be run to finish the install don't know why.
 
 sudo ansible -i ../../ansible/hosts devsrv -m apt -a 'name=jenkins state=present' --private-key=id_rsa
+
+Bitbucket.
+
 Jenkins Bitbucket creation
-  1. Create SSH key for jenkins User
-    - ssh-keygen -t rsa
+  1. Create SSH key for jenkins user
+    - become the user jenkins: sudo su - jenkins
+    - create .ssh directory in /var/lib/jenkins home directory.
+    - type in and execute the following command: ssh-keygen -t rsa
+    - when prompted enter the following destination directory: /var/lib/jenkins/.ssh
   2. Copy the public key id_rsa.pub to Bitbucket
-  3. Settings, deployment keys and then click add key. Paste the key into
+  3. Settings, deployment keys and then click add key. Paste the key into the dialog box.
   4. Create a webhook, enter the following into the dialog box and select Push
-        - IP:8080/bitbucket-hook
+        - IP/ServerName:8080/bitbucket-hook
   5. Execute the following command from the command line as user jenkins
         - git ls-remote -h ssh://git@bitbucket.org:cmmills/fixyourip.com.git HEAD
         This should execute without errors.
+
+
+Notes after key creation.:
+
+jenkins@srv4:~$ ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/var/lib/jenkins/.ssh/id_rsa):
+Created directory '/var/lib/jenkins/.ssh'.
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /var/lib/jenkins/.ssh/id_rsa.
+Your public key has been saved in /var/lib/jenkins/.ssh/id_rsa.pub.
+The key fingerprint is:
+5c:e8:63:e2:0a:7d:7b:9d:cb:f2:a5:7e:da:d1:c5:f4 jenkins@srv4.opensitesolutions.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|                 |
+|         .       |
+|        . .     .|
+|       o .     o.|
+|      . S       E|
+|   . . o .   . . |
+|  . . o  . .o .  |
+|   . o .o.o+..   |
+|    . .. +B+.    |
++-----------------+
