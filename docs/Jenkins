@@ -32,7 +32,7 @@ Jenkins Bitbucket creation
     - become the user jenkins: sudo su - jenkins
     - create .ssh directory in /var/lib/jenkins home directory.
     - type in and execute the following command: ssh-keygen -t rsa
-    - when prompted enter the following destination directory: /var/lib/jenkins/.ssh
+    - accept default: /var/lib/jenkins/.ssh
   2. Copy the public key id_rsa.pub to Bitbucket
   3. Settings, deployment keys and then click add key. Paste the key into the dialog box.
   4. Create a webhook, enter the following into the dialog box and select Push
@@ -66,3 +66,10 @@ The key's randomart image is:
 |   . o .o.o+..   |
 |    . .. +B+.    |
 +-----------------+
+COnfgure jenkins user
+Click adavance
+Click the down arrow in the box labelled "kind"
+Scope field choose (Global jenkins,
+choose from the jenkins master ~/.ssh
+
+when a push to the branch is detected the branch chosen will be cloned into the /var/lib/jenkins/workspace/jobname directory.
