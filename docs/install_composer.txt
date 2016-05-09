@@ -1,0 +1,15 @@
+Download and install
+curl -sS https://getcompser.org/installer | php
+
+<code>
+curl -sS https://getcomposer.org/installer | php
+All settings correct for using Composer
+Downloading 1.0.3...
+
+Composer successfully installed to: /root/composer.phar
+Use it: php composer.phar
+</code>
+
+Enable composr globally
+move compposer.phar to /bin which is a known excutable path, which allows easier calls
+cp composer.phar to /bin/composer
