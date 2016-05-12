@@ -34,7 +34,7 @@ include 'left.inc';
             <h3 class="panel-title"><span class="glyphicon glyphicon-cog"></span> Docker</h3>
           </div>
           <div class="panel-body">
-              <a href="gitconfig.html" class="list-group-item disabled"> Dockerfile</a>
+              <a href="gitconfig.php" class="list-group-item disabled"> Dockerfile</a>
           </div>
         </div>
 
