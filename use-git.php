@@ -375,7 +375,7 @@ include 'left.inc';
 <!--- end center column --->
 
 <?php
-include 'right.inc';
+include 'git-right-column.inc';
 ?>
 
 <?php
