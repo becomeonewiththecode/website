@@ -14,9 +14,13 @@ include 'header.inc';
 include 'left.inc';
 ?>
 
-<?php
-include 'center.inc';
-?>
+<!--- begin center column Place information here--->
+<div class="col-md-8">
+  <div class="container-fluid">
+
+  </div>
+</div>
+<!--- end center column --->
 
 <?php
 include 'right.inc';
