@@ -16,7 +16,7 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li class="active"><a href="index.html"><icon class="fa fa-home fa-fw fa-2x"></a></li>
+        <li class="active"><a href="index.php"><icon class="fa fa-home fa-fw fa-2x"></a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
           <ul class="dropdown-menu">

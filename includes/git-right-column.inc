@@ -13,7 +13,7 @@
 
 <div class="list-group">
   <a href="#" class="list-group-item active">
-    GIT helper utilities
+    GIT Helper Utilities
   </a>
   <a href="https://www.gitkraken.com/" class="list-group-item">GITKRAKEN - GIT client</a>
   <a href="https://www.kernel.org/pub/software/scm/git/docs/gitk.html" class="list-group-item">GITK - GIT browser</a>
