@@ -3,11 +3,11 @@ set_include_path('includes:../includes');
  ?>
 
  <?php
- include 'navbar.inc'
+include 'header.inc';
 ?>
 
  <?php
-include 'header.inc';
+ include 'navbar.inc'
 ?>
 
 <?php
