@@ -24,7 +24,7 @@ include 'left.inc';
 
           <div class="jumbotron" class="">
             <p class="text-muted">
-              Automate infrastucture, app deployment and configuration management with ease.
+              Ansible is a provisionging and configuration management tool to automate infrastucture, app deployment and configuration updates and upgrades with ease.
             </p>
           </div>
 
@@ -38,7 +38,7 @@ include 'left.inc';
               <a href="#" class="list-group-item disabled"> Playbooks</a>
               <a href="#" class="list-group-item disabled"> Roles</a>
           </div>
-        </div> 
+        </div>
 
     <!--- end content --->
 
