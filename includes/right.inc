@@ -10,6 +10,22 @@
       </p>
     </a>
 </div>
+
+<!--- begin google responsive adds --->
+<div>
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <!-- become one with the code - right side add -->
+  <ins class="adsbygoogle"
+       style="display:block"
+       data-ad-client="ca-pub-9703614120192799"
+       data-ad-slot="6724379019"
+       data-ad-format="auto"></ins>
+  <script>
+  (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+</div>
+<!--- end google responsive adds --->
+
 <!--- end content --->
 
 </div>
