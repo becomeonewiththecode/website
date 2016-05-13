@@ -3,7 +3,7 @@ set_include_path('includes:../includes');
  ?>
 
  <?php
-include 'header.inc';
+include 'git-header.inc';
 ?>
 
  <?php

@@ -3,7 +3,7 @@ set_include_path('includes:../includes');
  ?>
 
 <?php
-include 'header.inc';
+include 'git-header.inc';
 ?>
 
 <?php
@@ -21,6 +21,10 @@ include 'left.inc';
     <!-- Begin Content -->
     <div class="page-header">
       <h2>GIT Configuration file</h2>
+      <p>
+        Git configuration file is used for creating aliases and information about the user and the project. The configration file below shows Alias and options that
+        can be used.
+      </p>
       <ul class="pager">
         <li class="previous"><a href="use-git.php">Using GIT</a></li>
         <li class="next disabled"><a href="gitconfig.php">Next</a></li>

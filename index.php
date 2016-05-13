@@ -34,14 +34,11 @@ include 'left.inc';
       </div>
 
       <div class="list-group">
-        <a href="#" class="list-group-item active">Infrastructure as CODE</a>
-        <button type="button" class="list-group-item">Codify</button>
+        <a href="#" class="list-group-item active">Infrastructure as CODE or Software defined network provides the following</a>
         <button type="button" class="list-group-item">Robust Systems</button>
         <button type="button" class="list-group-item">Monitoring</button>
-        <button type="button" class="list-group-item">Discovery</button>
+        <button type="button" class="list-group-item">Service Discovery</button>
         <button type="button" class="list-group-item">Orchestration</button>
-        <button type="button" class="list-group-item">Updating</button>
-        <button type="button" class="list-group-item">Destroy</button>
       </div>
 
       <div class="list-group">
