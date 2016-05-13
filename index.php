@@ -27,7 +27,7 @@ include 'left.inc';
           <div class="col-xs-10">
             <h4 class="list-group-item-heading">Code:</h4>
             <p>
-            The command line is where it starts and ends, use code to create change. A journey into understandinging code as infrastructure and the tools mentioned on the left to accomplish that goal.
+            The command line is where it starts and ends, use code to create change. A journey into understandinging how to use code to create change on platforms and physical and virtual infrastructure using various open source software.
             </p>
           </div>
         </div>
