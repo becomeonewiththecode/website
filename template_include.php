@@ -17,6 +17,10 @@ include 'left.inc';
 <!--- begin center column Place information here--->
 <div class="col-md-8">
   <div class="container-fluid">
+    <!--- begin content --->
+
+
+    <!--- end content --->
 
   </div>
 </div>
