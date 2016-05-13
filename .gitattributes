@@ -1,2 +1,3 @@
 *.txt export-ignore
 docs/ export-ignore
+template_include.php export-ignore
