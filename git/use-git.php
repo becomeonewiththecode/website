@@ -1,6 +1,23 @@
+<!--- begin header --->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content='Use GIT to apply version control your code, softare and documents.'>
+    <meta name="keywords" content="GIT, ansible, docker, terraform, consul, vagrant, config management, continous integration, continuos delivery, change managment ">
+    <title>GIT</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/custom.css" rel="stylesheet">
+</head>
+<body>
+
 <?php
 set_include_path('includes:../includes');
- ?>
+?>
 
  <?php
 include 'git-header.inc';
@@ -163,7 +180,6 @@ include 'left.inc';
     #       deleted:    webreport.sh
     #
     </pre>
-
 
     <h3>removing the files from the repository</h3>
     <pre>
@@ -344,7 +360,7 @@ include 'left.inc';
     The reason for the push failure, is that you have the same brach checked out on the master branch. To get around this if you are certain you won't overwrite any changes you have done on
     The remote side is
 
-    git onfig receive.denyCurrentBranch warn
+    git config receive.denyCurrentBranch warn
     </code>
 
     Check to see if the command is set
