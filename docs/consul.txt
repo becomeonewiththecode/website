@@ -1,0 +1,42 @@
+https://www.digitalocean.com/community/tutorials/how-to-configure-consul-in-a-production-environment-on-ubuntu-14-04
+
+These steps are needed for either a consul server or agent.
+
+
+Add consul user
+adduser consul
+Create the necessary confugration directories
+mkdir -p /etc/consul.d/{bootstrap,server,client}
+
+Create directory that will store persistent data times when the server restarts or boots
+mkdir /var/consul
+chown consul:consul /var/consul
+
+install ing consul
+
+find the version of CPU you are using
+- uname -a 
+-- Linux srv3 3.2.34-30 #17 SMP Mon Apr 13 15:53:45 UTC 2015 armv7l armv7l armv7l GNU/Linux
+arm based system, download the arm version from https://www.consul.io/downloads.html
+-- wget https://releases.hashicorp.com/consul/0.6.4/consul_0.6.4_linux_arm.zip
+unzip consul_0.6.4_linux_arm.zip
+unzip the file and copy the consul bin file to /usr/local/bin
+
+Start consul using the following command
+ consul agent --data-dir /usr/local/consul --server
+start the agent - agent option
+--data-dir - indicates directory to place all data.
+--server - become a consul server
+
+root@srv3:/usr/local/bin# consul agent --data-dir /usr/local/consul --server start
+==> Starting Consul agent...
+==> Starting Consul agent RPC...
+==> Consul agent running!
+         Node name: 'srv3'
+        Datacenter: 'dc1'
+            Server: true (bootstrap: false)
+       Client Addr: 127.0.0.1 (HTTP: 8500, HTTPS: -1, DNS: 8600, RPC: 8400)
+      Cluster Addr: 10.1.0.25 (LAN: 8301, WAN: 8302)
+    Gossip encrypt: false, RPC-TLS: false, TLS-Incoming: false
+             Atlas: <disabled>
+
