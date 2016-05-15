@@ -24,7 +24,7 @@ include 'navbar.inc'
 ?>
 
 <?php
-include 'left.inc';
+include 'git-left.inc';
 ?>
 
 <!--- begin center column Place information here--->
@@ -63,7 +63,7 @@ include 'left.inc';
 <!--- end center column --->
 
 <?php
-include 'right.inc';
+include 'git-right-column.inc';
 ?>
 
 <?php

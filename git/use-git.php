@@ -28,7 +28,7 @@ include 'navbar.inc'
 ?>
 
 <?php
-include 'left.inc';
+include 'git-left.inc';
 ?>
 
 <!--- begin center column Place information here--->
