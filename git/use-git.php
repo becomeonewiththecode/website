@@ -55,7 +55,7 @@ include 'left.inc';
 
     Set your email address
     <pre>
-      git config --global user.email “cmills@opensitesolutions.com”
+      git config --global user.email “cmills@acme.com”
     </pre>
 
     Change your commit editor
@@ -80,25 +80,25 @@ include 'left.inc';
     First find out the commit point you want to use.
     - git-log or git log --oneline
 
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Fri Nov 13 00:27:01 2015 -0500
 
         November 13
 
     commit 0a8dd73ebf26df47b836388dffe39f61dbd7eb82
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Fri Nov 13 00:21:31 2015 -0500
 
         November 13
 
     commit f13a37d2c3acf0c23a6651cb7c7c47315eb6a00a
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Wed Oct 21 11:37:15 2015 -0400
 
         Added images and stylesheets for the new index page.
 
     commit 654898f53c71aa4e82d633426b6a2027b0078b59
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Sun Oct 18 22:27:24 2015 -040
 
     Commit
@@ -185,7 +185,7 @@ include 'left.inc';
     <pre>
     git rm *
 
-    [cmills@fusion opensitesolutions.com]$ git rm *
+    [cmills@fusion acme.com]$ git rm *
     rm 'checkrbl.sh'
     rm 'create_pflogreport.sh'
     rm 'create_postgreyport.sh'
@@ -209,8 +209,8 @@ include 'left.inc';
     <pre>
     git remote -v
     cmills@testsrv toolsforthecloud.com]$ git remote -v
-    origin  ssh://srv2.opensitesolutions.com:1001/home/cmills/work_dir/toolsforthecloud.com (fetch)
-    origin  ssh://srv2.opensitesolutions.com:1001/home/cmills/work_dir/toolsforthecloud.com (push)
+    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/toolsforthecloud.com (fetch)
+    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/toolsforthecloud.com (push)
     </pre>
 
     <h3>Remove remote repository</h3>
@@ -219,7 +219,7 @@ include 'left.inc';
     </pre>
 
     <h3>Add repositories</h3>
-    <pre>git remote add origin (whatever name points to the repositories) ssh://git.opensitesolutions.com:1001/home/cmils/work_dir/opensitesolutions.com</pre>
+    <pre>git remote add origin (whatever name points to the repositories) ssh://git.acme.com:1001/home/cmils/work_dir/acme.com</pre>
 
     <i>If you have moved the location of the repository on the master GIT server, you will need to execute the following command before doing another push or pull:</i>
 
@@ -246,12 +246,12 @@ include 'left.inc';
     <h3>Cloning repositories locally </h3>
     <pre>
     git clone -l local-repository clone-location
-    git clone -l /var/ww/html/opensitesolutions.com test
+    git clone -l /var/ww/html/acme.com test
     Git clone from remote server using ssh, 1001 is the port to connect on.
 
-    [cmills@testsrv workdir]$ git clone ssh://cmills@srv2.opensitesolutions.com:1001/home/cmills/web_dir/opensitesolutions.com
-    Cloning into 'opensitesolutions.com'...
-    cmills@srv2.opensitesolutions.com's password:
+    [cmills@testsrv workdir]$ git clone ssh://cmills@srv2.acme.com:1001/home/cmills/web_dir/acme.com
+    Cloning into 'acme.com'...
+    cmills@srv2.acme.com's password:
     remote: Counting objects: 201, done.
     remote: Compressing objects: 100% (199/199), done.
     remote: Total 201 (delta 46), reused 0 (delta 0)
@@ -262,7 +262,7 @@ include 'left.inc';
 
     <h3>Clone from a remote location</h3>
     <pre>
-    git clone ssh://srv2.opensitesolutions.com:1001/home/cmills/work_dir/opensitesolutions.com .
+    git clone ssh://srv2.acme.com:1001/home/cmills/work_dir/acme.com .
     The above command will fetch the entire repository to your current location.
     </pre>
 
@@ -288,13 +288,13 @@ include 'left.inc';
     <pre>
     eg: removing directory .project from tracking.
     git rm --cache filename or directory
-    oss@cmills-Kudu-Pro:~/work/office.opensitesolutions.com$ git rm --cache .project
+    oss@cmills-Kudu-Pro:~/work/office.acme.com$ git rm --cache .project
     rm '.project'
     </pre>
 
     <h3>results after files been deleted</h3>
     <pre>
-    oss@cmills-Kudu-Pro:~/work/office.opensitesolutions.com$ git status
+    oss@cmills-Kudu-Pro:~/work/office.acme.com$ git status
     On branch dev
     Your branch is up-to-date with 'origin/dev'.
     Changes to be committed:
@@ -306,7 +306,7 @@ include 'left.inc';
 
     <h3>example .gitignore file</h3>
     <pre>
-    oss@cmills-Kudu-Pro:~/work/office.opensitesolutions.com$ cat .gitignore
+    oss@cmills-Kudu-Pro:~/work/office.acme.com$ cat .gitignore
     \.buildpath
     \.project
     \.settings
@@ -315,7 +315,7 @@ include 'left.inc';
 
     <b>commit your changes, this will update your repository, going forward the contents within the .gitignore file will not be tracked</b>
     <pre>
-    oss@cmills-Kudu-Pro:~/work/office.opensitesolutions.com$ git commit -a -m "Removed eclipse .project file from tracking"
+    oss@cmills-Kudu-Pro:~/work/office.acme.com$ git commit -a -m "Removed eclipse .project file from tracking"
     [dev c50370f] Removed eclipse .project file from tracking
      1 file changed, 28 deletions(-)
      delete mode 100644 .project
@@ -351,9 +351,9 @@ include 'left.inc';
     remoteerror:
     remote: error: To squelch this message and still keep the default behaviour, set
     remote: error: 'receive.denyCurrentBranch' configuration variable to 'refuse'.
-    To ssh://cmills@srv1.opensitesolutions.com:1001/opt/git/ansible/
+    To ssh://cmills@srv1.acme.com:1001/opt/git/ansible/
      ! [remote rejected] dev -> dev (branch is currently checked out)
-    error: failed to push some refs to 'ssh://cmills@srv1.opensitesolutions.com:1001/opt/git/ansible/'
+    error: failed to push some refs to 'ssh://cmills@srv1.acme.com:1001/opt/git/ansible/'
     </pre>
 
     <code>
@@ -368,7 +368,7 @@ include 'left.inc';
     <pre>
     git config receive.denyCurrentBranch
 
-    [cmills@testsrv office.opensitesolutions.com]$ git config receive.denyCurrentBranch
+    [cmills@testsrv office.acme.com]$ git config receive.denyCurrentBranch
     warn
     </pre>
 

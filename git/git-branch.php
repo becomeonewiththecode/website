@@ -43,25 +43,25 @@ include 'left.inc';
     First find out the commit point you want to use.
     - git-log or git log --oneline
 
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Fri Nov 13 00:27:01 2015 -0500
 
         November 13
 
     commit 0a8dd73ebf26df47b836388dffe39f61dbd7eb82
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Fri Nov 13 00:21:31 2015 -0500
 
         November 13
 
     commit f13a37d2c3acf0c23a6651cb7c7c47315eb6a00a
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Wed Oct 21 11:37:15 2015 -0400
 
         Added images and stylesheets for the new index page.
 
     commit 654898f53c71aa4e82d633426b6a2027b0078b59
-    Author: Clarence Mills <cmills@fusion.opensitesolutions.com>
+    Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Sun Oct 18 22:27:24 2015 -040
 
     Commit
