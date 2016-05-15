@@ -12,7 +12,7 @@
 </div>
 
 <!--- begin google responsive adds --->
-<div class="container">
+<div>
   <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <!-- become one with the code - right side add -->
   <ins class="adsbygoogle"
