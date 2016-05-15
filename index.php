@@ -1,6 +1,3 @@
-<?php
-set_include_path('includes:../includes');
- ?>
  <!--- begin header --->
  <!DOCTYPE html>
  <html>
@@ -18,6 +15,9 @@ set_include_path('includes:../includes');
  </head>
  <body>
 
+<?php
+set_include_path('includes:../includes');
+?>
 
 <?php
 include 'navbar.inc'
