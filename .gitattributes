@@ -1,3 +1,8 @@
 *.txt export-ignore
 docs/ export-ignore
+.gitattributes export-ignore
+.gitignore export-ignore
+.project export-ignore
+contributers.txt
+owner.txt
 template_include.php export-ignore
