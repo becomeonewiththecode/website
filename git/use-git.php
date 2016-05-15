@@ -208,9 +208,9 @@ include 'left.inc';
     <h3>List remote repositories</h3>
     <pre>
     git remote -v
-    cmills@testsrv toolsforthecloud.com]$ git remote -v
-    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/toolsforthecloud.com (fetch)
-    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/toolsforthecloud.com (push)
+    cmills@testsrv acme.com]$ git remote -v
+    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/acme.com (fetch)
+    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/acme.com (push)
     </pre>
 
     <h3>Remove remote repository</h3>
@@ -230,9 +230,9 @@ include 'left.inc';
 
     <h3>Publish Repository to web site directory without the .git file</h3>
     <pre>
-    git archive --format=zip -o /home/cmills/opensitesolutions.zip HEAD
-    git archive --format=tar -o /home/cmills/opensitesolutions.tar HEAD
-    git archive --format=tgz -o /home/cmills/opensitesolutions.tgz HEAD
+    git archive --format=zip -o /home/cmills/acme.zip HEAD
+    git archive --format=tar -o /home/cmills/acme.tar HEAD
+    git archive --format=tgz -o /home/cmills/acme.tgz HEAD
     </pre>
 
 
