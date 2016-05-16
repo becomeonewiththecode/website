@@ -67,9 +67,9 @@ include 'git-left.inc';
 
     <h3>Rollback</h3>
 
-    In order to roll back to another commit time frame, you need a find the commit time
+    In order to roll back to another commit time frame, you need to find the commit time period.
 
-    git log --online (git version 2.5.0 )
+    <code>git log --online </code>(git version 2.5.0 )
 
     <pre class="pre-scrollable">
     oss@cmills-Kudu-Pro:~/repos/scripts$ git log --oneline
@@ -111,112 +111,16 @@ include 'git-left.inc';
     </pre>
 
 
-    <h3>Understanding Repositories</h3>
-
-    <h3>Removing files from a repository</h3>
-
-    <pre>
-    shows files that were deleted from the directory and not listed in the repository.
-    git status -
-    # Changes not staged for commit:
-    #   (use "git add/rm <file>..." to update what will be committed)
-    #   (use "git checkout -- <file>..." to discard changes in working directory)
-    #
-    #       deleted:    checkrbl.sh
-    #       deleted:    create_pflogreport.sh
-    #       deleted:    create_postgreyport.sh
-    #       deleted:    display_cert.sh
-    #       deleted:    display_pkcs12cert.sh
-    #       deleted:    dnspropogationcheck.sh
-    #       deleted:    dnsreport.sh
-    #       deleted:    domain_reports.sh
-    #       deleted:    get_ip_info.sh
-    #       deleted:    ipreport.sh
-    #       deleted:    mailcert_check.sh
-    #       deleted:    nettools.sh
-    #       deleted:    rblcheck.pl
-    #       deleted:    rblcheck_list.pl
-    #       deleted:    ssl-cert-check
-    #       deleted:    webreport.sh
-    #
-    </pre>
-
-    <h3>removing files from the repository</h3>
-    <pre>
-    git rm *
-
-    [cmills@fusion acme.com]$ git rm *
-    rm 'checkrbl.sh'
-    rm 'create_pflogreport.sh'
-    rm 'create_postgreyport.sh'
-    rm 'display_cert.sh'
-    rm 'display_pkcs12cert.sh'
-    rm 'dnspropogationcheck.sh'
-    rm 'dnsreport.sh'
-    rm 'domain_reports.sh'
-    rm 'get_ip_info.sh'
-    rm 'ipreport.sh'
-    rm 'mailcert_check.sh'
-    rm 'nettools.sh'
-    rm 'rblcheck.pl'
-    rm 'rblcheck_list.pl'
-    rm 'ssl-cert-check'
-    rm 'webreport.sh'
-    </pre>
-    <p>Adding --cache will remove the files from the repository but keep the files in the local directory, git removes it from tracking.</p>
-
-    <h3>List remote repositories</h3>
-    <pre>
-    git remote -v
-    cmills@testsrv acme.com]$ git remote -v
-    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/acme.com (fetch)
-    origin  ssh://srv2.acme.com:1001/home/cmills/work_dir/acme.com (push)
-    </pre>
-
-    <h3>Remove remote repository</h3>
-    <pre>
-    git remote remove origin
-    </pre>
-
-    <h3>Add repositories</h3>
-    <pre>git remote add origin (whatever name points to the repositories) ssh://git.acme.com:1001/home/cmils/work_dir/acme.com</pre>
-
-    <i>If you have moved the location of the repository on the master GIT server, you will need to execute the following command before doing another push or pull:</i>
-
-    <pre>git push --set-upstream origin dev</pre>
-    <p>The above command tells  GIT to start tracking changes to the new remoete "origin"</p>
-
-    <h3>Cloning</h3>
-
-    <h3>Cloning repositories locally </h3>
-    <pre>
-    git clone -l local-repository clone-location
-    git clone -l /var/ww/html/acme.com test
-    Git clone from remote server using ssh, 1001 is the port to connect on.
-
-    [cmills@testsrv workdir]$ git clone ssh://cmills@srv2.acme.com:1001/home/cmills/web_dir/acme.com
-    Cloning into 'acme.com'...
-    cmills@srv2.acme.com's password:
-    remote: Counting objects: 201, done.
-    remote: Compressing objects: 100% (199/199), done.
-    remote: Total 201 (delta 46), reused 0 (delta 0)
-    Receiving objects: 100% (201/201), 906.00 KiB | 487.00 KiB/s, done.
-    Resolving deltas: 100% (46/46), done.
-    </pre>
-
-
     <h3>Clone from a remote location</h3>
     <pre>
     git clone ssh://srv2.acme.com:1001/home/cmills/work_dir/acme.com .
     The above command will fetch the entire repository to your current location.
     </pre>
 
-
     <h3>Show an ascii diagram of how branch’s are connected</h3>
     <pre>
     git log --all --graph --decorate --oneline --simplify-by-decoration
     </pre>
-
 
     <h3>Ignoring files</h3>
     <pre>
@@ -224,7 +128,7 @@ include 'git-left.inc';
     </pre>
 
     <ul>
-    <li>Remove the file from being tracked.
+    <li>Remove files from being tracked.
     <li>Create .gitignore file if you have already done so.
     <li>Add the directory of files that you don’t want tracked.
     <li>Commit the changes.

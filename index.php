@@ -57,10 +57,6 @@ include 'left.inc';
         <button type="button" class="list-group-item">Orchestration</button>
       </div>
 
-      <div class="list-group">
-        <a href="#" class="list-group-item active">Software defined Network</a>
-        <button type="button" class="list-group-item">Codify</button>
-      </div>
     <!--- end content--->
 
   </div>

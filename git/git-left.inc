@@ -7,6 +7,7 @@
         <a href="/git/git-commit.php" class="list-group-item">Git commit</a>
         <a href="/git/git-branch.php" class="list-group-item">Git branch</a>
         <a href="/git/git-publish.php" class="list-group-item">Git publsih</a>
+        <a href="/git/git-repository.php" class="list-group-item">Git repository</a>
         <a href="/git/use-git.php" class="list-group-item">Use Git</a>
     </div>
   </div>
