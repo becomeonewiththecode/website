@@ -36,13 +36,9 @@ include 'git-left.inc';
   <div class="container-fluid">
 
     <!-- Begin Content -->
-    <div class="page-header">
-      <h2>Using GIT</h2>
-      <ul class="pager">
-        <li class="previous"><a href="git.php">GIT</a></li>
-        <li class="next"><a href="gitconfig.php">GIT Configuration file</a></li>
-      </ul>
-    </div>
+
+      <h1>Using GIT</h1>
+      <div class="page-header"></div>
 
   <div>
 
@@ -326,12 +322,6 @@ include 'git-left.inc';
     <p>
     <code>git ls-files -dmo --exclude-standard</code>
     </p>
-
-    <ul class="pager">
-      <li class="previous"><a href="git.php">GIT</a></li>
-      <li class="top"><a href="use-git.php">Top</a></li>
-      <li class="next"><a href="gitconfig.php">GIT Configuration file</a></li>
-    </ul>
 
     <!-- End Content -->
 

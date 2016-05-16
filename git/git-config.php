@@ -38,11 +38,6 @@ include 'git-left.inc';
         Git configuration file is used for creating aliases and information about the user and the project. The configration file below shows Alias and options that
         can be used.
       </p>
-      <ul class="pager">
-        <li class="previous"><a href="use-git.php">Using GIT</a></li>
-        <li class="next disabled"><a href="gitconfig.php">Next</a></li>
-      </ul>
-    </div>
 
     <pre>
     [user]
@@ -122,11 +117,6 @@ include 'git-left.inc';
          [oss:~/repos/web/becomeonewiththecode.com] dev(+51/-61)* 1 ± git brdel new-branch
          Deleted branch new-branch (was f128c45).
       </pre>
-
-      <ul class="pager">
-        <li class="previous"><a href="use-git.php">Using GIT</a></li>
-        <li class="next disabled"><a href="gitconfig.php">Next</a></li>
-      </ul>
 
     </div>
 
