@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content='Journey into using code and open source tools to create change'>
     <meta name="keywords" content="GIT, ansible, docker, terraform, consul, vagrant, config management, continous integration, continuos delivery, change managment ">
-    <title>Become one with the Code</title>
+    <title>Git onfiguration file</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
@@ -33,7 +33,7 @@ include 'git-left.inc';
 
     <!-- Begin Content -->
     <div class="page-header">
-      <h2>GIT Configuration file</h2>
+      <h1>GIT Configuration file</h1>
       <p>
         Git configuration file is used for creating aliases and information about the user and the project. The configration file below shows Alias and options that
         can be used.
@@ -109,10 +109,26 @@ include 'git-left.inc';
        rmrepo = remote remove
     </pre>
 
-    <ul class="pager">
-      <li class="previous"><a href="use-git.php">Using GIT</a></li>
-      <li class="next disabled"><a href="gitconfig.php">Next</a></li>
-    </ul>
+    <div class="well-lg">
+      <p>
+        Using aliases gives an added bonus of when you forget a command listed within the config file, you can enter something similiar and git will check the .gitconfig file and return anyting similiar to what you may have meant, example below:
+      </p>
+      <pre>
+        [oss:~/repos/web/becomeonewiththecode.com] dev(+51/-61)* 1 ± git del new-branch
+        git: 'del' is not a git command. See 'git --help'.
+
+        Did you mean this?
+	       brdel
+         [oss:~/repos/web/becomeonewiththecode.com] dev(+51/-61)* 1 ± git brdel new-branch
+         Deleted branch new-branch (was f128c45).
+      </pre>
+
+      <ul class="pager">
+        <li class="previous"><a href="use-git.php">Using GIT</a></li>
+        <li class="next disabled"><a href="gitconfig.php">Next</a></li>
+      </ul>
+
+    </div>
 
     <!-- End Content -->
 

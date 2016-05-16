@@ -19,6 +19,7 @@
   <a href="https://www.kernel.org/pub/software/scm/git/docs/gitk.html" class="list-group-item">GITK - GIT browser</a>
   <a href="http://jonas.nitro.dk/tig/" class="list-group-item">TIG - text based interface to GIT</a>
   <a href="https://github.com/nojhan/liquidprompt" class="list-group-item">LiquidPrompt - Adaptive shell prompt</a>
+  <a href="https://code.google.com/p/git-repo/" class="list-group-item">Git-repo</a>
 </div>
 
 

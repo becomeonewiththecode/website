@@ -37,16 +37,53 @@ include 'git-left.inc';
     <!--- begin content --->
 
     <h1> GIT Branch</h3>
+    <div class="page-header"></div>
+      <p>
+        Branching, controls code modification, merging and keeping the master branch clean. Creating and using different branch's allows you to work on patch's to fix's safely without modifying or corrupting the main branch.
+      </p>
+
+    <h4>Create a new branch</h4>
+    <p>git branch branch-name</p>
+    <pre>
+      [oss:~/repos/web/becomeonewiththecode.com] dev(+8/-22)* ± git branch somo
+    </pre>
+    <p>
+      The output is displayed below.
+    </p>
+    <pre>
+      [oss:~/becomeonewiththecode.com] dev(+8/-22)* ± git branch
+      master                47ad3dd Reverted addition to right column
+      <b>somo                  f128c45 Updated files to include contributor.txt,</b>
+    </pre>
+    <h4>Creating a new branch will duplicate HEAD into the new branch.</h4>
+
+    <div class="page-header"></div>
+    <h4>Create a new branch using git checkout</h4>
+    Creating a new branch can be done by using checkout -b branchname.
+    Example: you have modify some files and want to checkout the files to a new branch but without modifying the current branch.
+    <Pre>
+      oss:~/becomeonewiththecode.com] dev(+8/-22)* ± git checkout -b new-branch
+      M	git/git-branch.php
+      M	git/use-git.php
+    </Pre>
+    the result will create and checkout the branch "new-branch" duplicating the branch you are in with the modified files and all existing files.
+    <pre>
+      [oss:~/becomeonewiththecode.com] new-branch(+38/-25)* ± git st
+      ## new-branch
+      M git/git-branch.php
+      M git/use-git.php
+    </pre>
+
+    <h4>Create a new branch from a commit log</h4>
+    First find out the commit point using the following command.
+    <pre>
+      git log
+    </pre>
+
+    <p>
+      This will display your commit log.
+    </p>
     <pre class="pre-scrollable">
-    Create a new branch
-    git branch branch-name
-    - git branch production
-    If you are creating a new branch it will copy files from head.
-
-    Checkout commits from a branch into a new branch you create using checkout
-    First find out the commit point you want to use.
-    - git-log or git log --oneline
-
     Author: Clarence Mills <cmills@fusion.acme.com>
     Date: Fri Nov 13 00:27:01 2015 -0500
 
@@ -70,6 +107,7 @@ include 'git-left.inc';
 
     Commit
     </pre>
+
 
 
     <!--- end content --->

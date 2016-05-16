@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content='Use GIT to apply version control your code, softare and documents.'>
     <meta name="keywords" content="GIT, ansible, docker, terraform, consul, vagrant, config management, continous integration, continuos delivery, change managment ">
-    <title>GIT</title>
+    <title>Use GIT</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
@@ -68,42 +68,6 @@ include 'git-left.inc';
       git config --list
     </pre>
   </div>
-
-    <h3>Branch</h3>
-    <pre class="pre-scrollable">
-    Create a new branch
-    git branch branch-name
-    - git branch production
-    If you are creating a new branch it will copy files from head.
-
-    Checkout commits from a branch into a new branch you create using checkout
-    First find out the commit point you want to use.
-    - git-log or git log --oneline
-
-    Author: Clarence Mills <cmills@fusion.acme.com>
-    Date: Fri Nov 13 00:27:01 2015 -0500
-
-        November 13
-
-    commit 0a8dd73ebf26df47b836388dffe39f61dbd7eb82
-    Author: Clarence Mills <cmills@fusion.acme.com>
-    Date: Fri Nov 13 00:21:31 2015 -0500
-
-        November 13
-
-    commit f13a37d2c3acf0c23a6651cb7c7c47315eb6a00a
-    Author: Clarence Mills <cmills@fusion.acme.com>
-    Date: Wed Oct 21 11:37:15 2015 -0400
-
-        Added images and stylesheets for the new index page.
-
-    commit 654898f53c71aa4e82d633426b6a2027b0078b59
-    Author: Clarence Mills <cmills@fusion.acme.com>
-    Date: Sun Oct 18 22:27:24 2015 -040
-
-    Commit
-    </pre>
-
 
     <h3>Rollback</h3>
 
@@ -181,7 +145,7 @@ include 'git-left.inc';
     #
     </pre>
 
-    <h3>removing the files from the repository</h3>
+    <h3>removing files from the repository</h3>
     <pre>
     git rm *
 
@@ -225,21 +189,6 @@ include 'git-left.inc';
 
     <pre>git push --set-upstream origin dev</pre>
     <p>The above command tells  GIT to start tracking changes to the new remoete "origin"</p>
-
-    <h3>Publishing a repository</h3>
-
-    <h3>Publish Repository to web site directory without the .git file</h3>
-    <pre>
-    git archive --format=zip -o /home/cmills/acme.zip HEAD
-    git archive --format=tar -o /home/cmills/acme.tar HEAD
-    git archive --format=tgz -o /home/cmills/acme.tgz HEAD
-    </pre>
-
-
-    <h3>Publish current checked out branch</h3>
-    <pre>
-    sudo git archive --format=tar --output /tmp/office.tar HEAD
-    </pre>
 
     <h3>Cloning</h3>
 

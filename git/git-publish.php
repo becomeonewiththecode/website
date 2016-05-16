@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content='Use git to archive or publish your repository, code or project.'>
     <meta name="keywords" content="GIT, change managment, git publish, git archive ">
-    <title>Git archive</title>
+    <title>Git archive or publish</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet">
@@ -32,9 +32,10 @@ include 'git-left.inc';
  <div class="container-fluid">
    <!--- begin content --->
    <h1>GIT archive or publish your repository.</h1>
-   <div class="well">
-     <p>GIT provides a method that allow you to publish your the contents of you repository. The method and command is <code>git archive</code> </p>
-   </div>
+     <div class="page-header"></div>
+   <h4>
+     <p>GIT provides a method that allow you to publish the contents of you repository to an archive. The method and command is <code>git archive</code> </p>
+   </h4>
 
    <h3>Publish current checked out branch</h3>
    <pre>

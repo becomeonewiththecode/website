@@ -30,10 +30,9 @@ include 'git-left.inc';
 <!--- begin center column Place information here--->
 <div class="col-md-8">
   <div class="container-fluid">
-
-      <div class="page-header">
+     <!--- begin content --->
         <h1> GIT</h1>
-      </div>
+        <div class="page-header"></div>
 
       <div class="jumbotron" class="">
         <p class="text-muted">
@@ -57,7 +56,7 @@ include 'git-left.inc';
           <a href="gitconfig.html" class="list-group-item disabled"> GitHub</a>
       </div>
     </div>
-
+    <!--- end content --->
   </div>
 </div>
 <!--- end center column --->
