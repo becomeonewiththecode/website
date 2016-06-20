@@ -31,9 +31,9 @@ include 'git-left.inc';
 <div class="col-md-8">
   <div class="container-fluid">
     <!-- begin content --->
-
+    <div class="page-header">
     <h1>GIT Repository</h1>
-    <div class="header"></div>
+    </div>
 
     <h3>Add repositories</h3>
     <pre>git remote add origin (whatever name points to the repositories) ssh://git.acme.com:1001/home/cmils/work_dir/acme.com</pre>

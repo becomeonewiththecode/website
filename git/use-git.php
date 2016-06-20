@@ -36,9 +36,9 @@ include 'git-left.inc';
   <div class="container-fluid">
 
     <!-- Begin Content -->
-
+    <div class="page-header">
       <h1>Using GIT</h1>
-      <div class="page-header"></div>
+    </div>
 
   <div>
 

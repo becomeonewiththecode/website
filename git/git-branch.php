@@ -35,9 +35,9 @@ include 'git-left.inc';
 <div class="col-md-8">
   <div class="container-fluid">
     <!--- begin content --->
-
+    <div class="page-header">
     <h1> GIT Branch</h3>
-    <div class="page-header"></div>
+    </div>
       <p>
         Branching, controls code modification, merging and keeping the master branch clean. Creating and using different branch's allows you to work on patch's to fix's safely without modifying or corrupting the main branch.
       </p>

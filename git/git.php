@@ -31,8 +31,9 @@ include 'git-left.inc';
 <div class="col-md-8">
   <div class="container-fluid">
      <!--- begin content --->
+      <div class="page-header">
         <h1> GIT</h1>
-        <div class="page-header"></div>
+      </div>
 
       <div class="jumbotron" class="">
         <p class="text-muted">

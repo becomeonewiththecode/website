@@ -31,9 +31,9 @@ include 'git-left.inc';
 <div class="col-md-8">
   <div class="container-fluid">
     <!--- begin content --->
-
+    <div class="page-header">
       <h1> GIT Commit</h1>
-    <div class="page-header"></div>
+    </div>
     <h4>
       Commiting files to the git repository is done right after you have added the file(s) into what is called the holding area.
     </h4>

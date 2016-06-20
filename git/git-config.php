@@ -34,7 +34,7 @@ include 'git-left.inc';
     <!-- Begin Content -->
     <div class="page-header">
       <h1>GIT Configuration file</h1>
-      <div class="page-header"></div>
+    </div>
       <p>
         Git configuration file is used for creating aliases and information about the user and the project. The configration file below shows Alias and options that
         can be used.
@@ -133,4 +133,4 @@ include 'git-right-column.inc';
 
 <?php
 include 'footer.inc';
- ?>
+?>

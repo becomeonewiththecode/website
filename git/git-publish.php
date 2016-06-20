@@ -31,11 +31,14 @@ include 'git-left.inc';
 <div class="col-md-8">
  <div class="container-fluid">
    <!--- begin content --->
+  <div class="page-header">
    <h1>GIT archive or publish your repository.</h1>
-     <div class="page-header"></div>
+  </div>
+
    <h4>
      <p>GIT provides a method that allow you to publish the contents of you repository to an archive. The method and command is <code>git archive</code> </p>
    </h4>
+
 
    <h3>Publish current checked out branch</h3>
    <pre>
