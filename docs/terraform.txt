@@ -1,0 +1,120 @@
+- download terraform
+- mv terrafor-download to /usr/loca/bin/terraform/
+- add the path to your .profile
+    export PATH=$PATH:/usr/loca/terraform
+    
+AWS
+- create a directory and that into a git repository
+- create an amazon web service user
+  - IAM - users, create new user
+  - download the keys, 
+  - click on the user - click on permission and select AmazonEC2FullAccess and attach the policy.
+  
+  apply your terraform
+  Check your terraform file to see what will happen.
+  [oss:~/repos/terraform] $ terraform plan
+Refreshing Terraform state prior to plan...
+
+
+The Terraform execution plan has been generated and is shown below.
+Resources are shown in alphabetical order for quick scanning. Green resources
+will be created (or destroyed and then created if an existing resource
+exists), yellow resources are being changed in-place, and red resources
+will be destroyed.
+
+Note: You didn't specify an "-out" parameter to save this plan, so when
+"apply" is called, Terraform can't guarantee this is what will execute.
+
+[oss:~/repos/terraform] 31s $ ls -la
+total 16
+drwxrwxr-x  3 oss oss 4096 Jun 17 15:39 .
+drwxrwxr-x 19 oss oss 4096 May 22 12:43 ..
+-rw-rw-r--  1 oss oss  227 Jun 17 15:39 aws.tf
+drwxrwxr-x  7 oss oss 4096 Jun 17 14:54 .git
+
++ aws_instance.webserver
+    ami:                      "" => "ami-fce3c696"
+    availability_zone:        "" => "<computed>"
+    ebs_block_device.#:       "" => "<computed>"
+    ephemeral_block_device.#: "" => "<computed>"
+    instance_state:           "" => "<computed>"
+    instance_type:            "" => "t2.micro"
+    key_name:                 "" => "<computed>"
+    placement_group:          "" => "<computed>"
+    private_dns:              "" => "<computed>"
+    private_ip:               "" => "<computed>"
+    public_dns:               "" => "<computed>"
+    public_ip:                "" => "<computed>"
+    root_block_device.#:      "" => "<computed>"
+    security_groups.#:        "" => "<computed>"
+    source_dest_check:        "" => "true"
+    subnet_id:                "" => "<computed>"
+    tenancy:                  "" => "<computed>"
+    vpc_security_group_ids.#: "" => "<computed>"
+
+
+Plan: 1 to add, 0 to change, 0 to destroy.
+
+Apply your changes:
+
+  [oss:~/repos/terraform] 2s $ terraform apply
+aws_instance.webserver: Creating...
+  ami:                      "" => "ami-fce3c696"
+  availability_zone:        "" => "<computed>"
+  ebs_block_device.#:       "" => "<computed>"
+  ephemeral_block_device.#: "" => "<computed>"
+  instance_state:           "" => "<computed>"
+  instance_type:            "" => "t2.micro"
+  key_name:                 "" => "<computed>"
+  placement_group:          "" => "<computed>"
+  private_dns:              "" => "<computed>"
+  private_ip:               "" => "<computed>"
+  public_dns:               "" => "<computed>"
+  public_ip:                "" => "<computed>"
+  root_block_device.#:      "" => "<computed>"
+  security_groups.#:        "" => "<computed>"
+  source_dest_check:        "" => "true"
+  subnet_id:                "" => "<computed>"
+  tenancy:                  "" => "<computed>"
+  vpc_security_group_ids.#: "" => "<computed>"
+aws_instance.webserver: Still creating... (10s elapsed)
+aws_instance.webserver: Creation complete
+
+Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
+
+The state of your infrastructure has been saved to the path
+below. This state is required to modify and destroy your
+infrastructure, so keep it safe. To inspect the complete state
+use the `terraform show` command.
+
+State path: terraform.tfstate
+
+[oss:~/repos/terraform] 17s $ ls -la
+total 24
+drwxrwxr-x  3 oss oss 4096 Jun 17 15:44 .
+drwxrwxr-x 19 oss oss 4096 May 22 12:43 ..
+-rw-rw-r--  1 oss oss  227 Jun 17 15:39 aws.tf
+drwxrwxr-x  7 oss oss 4096 Jun 17 14:54 .git
+-rw-rw-r--  1 oss oss 2269 Jun 17 15:44 terraform.tfstate
+-rw-rw-r--  1 oss oss  197 Jun 17 15:44 terraform.tfstate.backup
+
+Destroy your AWS instance
+use terraform destroy
+[oss:~/repos/terraform] 1 $ terraform destroy
+Do you really want to destroy?
+  Terraform will delete all your managed infrastructure.
+  There is no undo. Only 'yes' will be accepted to confirm.
+
+  Enter a value: yes
+
+aws_instance.webserver: Refreshing state... (ID: i-ca411e50)
+aws_instance.webserver: Destroying...
+aws_instance.webserver: Still destroying... (10s elapsed)
+aws_instance.webserver: Still destroying... (20s elapsed)
+aws_instance.webserver: Still destroying... (30s elapsed)
+aws_instance.webserver: Destruction complete
+
+Apply complete! Resources: 0 added, 0 changed, 1 destroyed.
+
+
+

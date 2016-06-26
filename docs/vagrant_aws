@@ -11,7 +11,7 @@ Vagrant File
     aws.secret_access_key = "SECRET ACCESS KEY"
     aws.keypair_name = "cmills_key.pem"
     aws.region = "us-east-1"
-    aws.instance_type = "t2.micro"                                      (AMI that's part of the free tier.)
+    aws.instance_type = "t2.micro"                                 
     aws.ami = "ami-8fcee4e5"
     #aws.security_groups = ["api_group"]
     override.ssh.username = "ubuntu"
@@ -20,6 +20,10 @@ Vagrant File
   end
 
 end vagrantfile
+
+
+Spin up an instances
+  vagrant up --provider=aws
 
 AWS specific commands:
 Finding AWS regions
@@ -48,7 +52,3 @@ Amazon EC2
 
 Vagrant images
 Amazon image details can be found here http://cloud-images.ubuntu.com/locator/ec2/
-
-
-Spin up an instances
-  vagrant up --provider=aws

@@ -1,0 +1,21 @@
+download ISO image
+create virtual machine
+boot virtual machine from the CD
+Using VNS, type in command in the installer to star an automated install via kickstar/preeseed/etc
+Packer automatically serves kickstart/preseed file with a buil-in web server
+Packer waits for ssh to become available
+OS installer runs and then reboots
+Packer connects via ssh to VM and runs provisioner (If set)
+Packer shuts down VM and then runs the post processor (if set0
+PROFIT
+
+command line
+Build an image from a template
+packer build template.json
+
+Inspect a template configuration
+packer inspect template.json
+
+Validate proper json and packer configuration
+packer validate template.json
+you should receive "Template validated successfully"
