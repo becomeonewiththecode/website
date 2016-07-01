@@ -5,8 +5,22 @@
   <b><a href="http://www.becomeonewiththecode.com">www.becomeonewiththecode.com</a></b>
 </div>
 
-<!-- start google analytics -->
+<!-- Google adds --->
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- Becomeonewiththecode.com -->
+  <ins class="adsbygoogle"
+   style="display:block"
+   data-ad-client="ca-pub-9703614120192799"
+   data-ad-slot="2347233815"
+   data-ad-format="auto">
+  </ins>
+   <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+  </script>
+<!-- End Google adds --->
+
+<!-- start google analytics -->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -17,7 +31,6 @@
   ga('send', 'pageview');
 
 </script>
-
 <!-- end google analytics -->
 
 <!-- jQuery library -->
