@@ -24,7 +24,7 @@ include 'navbar.inc'
 ?>
 
 <?php
-include 'left.inc';
+include 'ansible-left.inc';
 ?>
 
 <!--- begin center column Place information here--->
@@ -48,7 +48,7 @@ include 'left.inc';
           </div>
           <div class="panel-body">
               <a href="#" class="list-group-item disabled"> Configuration files</a>
-              <a href="#" class="list-group-item disabled"> Command line</a>
+              <a href="#" class="list-group-item"> Useful Command line commands</a>
               <a href="#" class="list-group-item disabled"> Playbooks</a>
               <a href="#" class="list-group-item disabled"> Roles</a>
           </div>
