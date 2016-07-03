@@ -21,6 +21,7 @@
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
           <ul class="dropdown-menu">
+            <li><a href="/ansible/ansible.php">Ansible</a></li>
             <li><a href="/git/git.php">GIT</a></li>
             <li><a href="/terraform/terraform.php">Terraform</a></li>
             <li><a href="/vagrant/vagrant.php">Vagrant</a></li>
